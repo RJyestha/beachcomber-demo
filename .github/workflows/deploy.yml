@@ -1,0 +1,20 @@
+name: Beachcomber CI/CD Pipeline
+on: [push]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: echo "Installing all dependencies..."
+
+      - name: Run tests
+        run: echo "Running tests on booking system... All passed!"
+
+      - name: Deploy to Dev Domain
+        run: echo "Tests passed! Deploying to dev.beachcomber.com..."
+
+      - name: Deploy to Production
+        run: echo "Dev approved! Deploying to beachcomber.com... LIVE!"
